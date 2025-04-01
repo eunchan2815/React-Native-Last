@@ -1,28 +1,38 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView, SafeAreaView } from "react-native";
+import { View, Text, StyleSheet, ScrollView, SafeAreaView, Dimensions, Image } from "react-native";
+import DodamHeader from "../../components/DodamHeader";
+import HomeComponent from "../../components/HomeComponent";
+
+const { width } = Dimensions.get('window');
 
 const Home = () => {
   return (
-    <View style={styles.container}>
-      <SafeAreaView>
-        <ScrollView>
-          <Text style={styles.text}>홈 화면</Text>
-        </ScrollView>
-      </SafeAreaView>
-    </View>
+    <SafeAreaView style={styles.safeArea}>
+      <DodamHeader/>
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
+        <Image 
+          source={require('../../assets/Banner.png')}  
+          style={[styles.Banner, { width: width * 0.93, marginHorizontal: width * 0.05 }]}
+        />
+        <HomeComponent/>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
-  text: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "black",
+  scrollViewContent: {
+    flexGrow: 1,
+    alignItems: 'center',
+    width: '100%',
+    padding: 10,
+  },
+  Banner: {
+    borderRadius: 15,
+    resizeMode: 'cover',
   },
 });
 
