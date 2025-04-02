@@ -2,11 +2,11 @@ import { View, Text, StyleSheet, Dimensions, Image } from "react-native";
 
 const { width } = Dimensions.get("window");
 
-const HomeComponent = () => {
+const EatComponent = () => {
   return (
     <View style={styles.container}>
       <View style={styles.Banner} />
-      
+
       <View style={styles.rowContainer}>
         <View style={styles.iconTextContainer}>
           <View style={styles.imageContainer}>
@@ -23,7 +23,7 @@ const HomeComponent = () => {
             참치 야채죽{"\n"}불고기치즈파니니{"\n"}샐러드바/드레싱
           </Text>
           <Text style={styles.menuText}>
-            깍두기{"\n"}안현우{"\n"}
+            깍두기{"\n"}안현우{"\n"}뱅글뱅글소시지
           </Text>
         </View>
       </View>
@@ -33,7 +33,7 @@ const HomeComponent = () => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10,
+    padding: 8,
   },
   Banner: {
     width: width - 30,
@@ -54,17 +54,17 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   imageContainer: {
-    width: 35,
-    height: 35,
+    width: 30,
+    height: 30,
     borderRadius: 25,
-    backgroundColor: "#6589e4",
+    backgroundColor: "#7b9ff8",
     justifyContent: "center",
     alignItems: "center",
     marginRight: 10,
   },
   image: {
-    width: 20,
-    height: 20,
+    width: 15,
+    height: 15,
     tintColor: "white",
   },
   titleText: {
@@ -80,10 +80,10 @@ const styles = StyleSheet.create({
   },
   menuText: {
     fontSize: 16,
-    fontFamily: "Pretendard-Regular",
+    fontFamily: "Pretendard-Medium",
     color: "#000",
     lineHeight: 23, 
   },
 });
 
-export default HomeComponent;
+export default EatComponent;

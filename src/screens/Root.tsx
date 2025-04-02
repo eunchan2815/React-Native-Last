@@ -12,7 +12,7 @@ const { width, height } = Dimensions.get("window");
 
 const Root = ({ navigation }: any) => {
   const handleLoginPress = () => {
-     navigation.navigate("Login");
+    navigation.navigate("Login");
   };
 
   const handleMainPress = () => {
