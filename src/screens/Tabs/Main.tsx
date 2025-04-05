@@ -1,6 +1,5 @@
 import React from "react";
-import { View, TouchableOpacity, StyleSheet, Image, Dimensions, } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { View, TouchableOpacity, StyleSheet, Image } from "react-native";
 
 const icons = {
   Home: require("../../assets/home.png"),

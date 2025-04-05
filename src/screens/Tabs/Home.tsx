@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, RefreshControl, StyleSheet, ScrollView, SafeAreaView, Dimensions, Image } from "react-native";
-import DodamHeader from "../../components/DodamHeader";
+import DodamBanner from "../../components/DodamBanner";
 import EatComponent from "../../components/EatComponent";
 import WakeupSongComponent from "../../components/WakeupSongComponent";
 import SmallComponent from "../../components/SmallComponent";
@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <DodamHeader/>
+      <DodamBanner/>
       <ScrollView 
       showsVerticalScrollIndicator={false} 
       contentContainerStyle={styles.scrollViewContent}

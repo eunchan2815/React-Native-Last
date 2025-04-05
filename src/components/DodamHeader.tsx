@@ -1,13 +1,10 @@
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, Text } from "react-native";
 
-const DodamHeader = () => {
+const DodamHeader = ({title, button}: HeaderProps) => {
   return (
     <View style={styles.headerContainer}>
-      <Image source={require('../assets/B1NDHeaderLogo.png')} />
-      <Image 
-        source={require('../assets/bell.png')} 
-        style={styles.image} 
-      />
+      <Text style={styles.title}>{title}</Text>
+      <View style={styles.button}>{button}</View>
     </View>
   )
 }
@@ -21,11 +18,16 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     width: '100%',
   },
-  image: {
-    width: 27,
-    height: 27,
+  button: {
+    width: 30,
+    height: 30,
     tintColor: "gray"
   },
-});
+  title: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: '#000',
+  },
+})
 
-export default DodamHeader;
+export default DodamHeader
