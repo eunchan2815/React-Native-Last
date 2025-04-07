@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { View, RefreshControl, StyleSheet, ScrollView, SafeAreaView, Dimensions, Image } from "react-native";
+import { View, RefreshControl, StyleSheet, ScrollView, Dimensions, Image } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import DodamBanner from "../../components/DodamBanner";
 import EatComponent from "../../components/EatComponent";
 import WakeupSongComponent from "../../components/WakeupSongComponent";
@@ -21,14 +22,14 @@ const Home = () => {
   };
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView style={styles.safeArea} edges={['top', 'left', 'right']}> {/* ✅ 여기 */}
       <DodamBanner/>
       <ScrollView 
-      showsVerticalScrollIndicator={false} 
-      contentContainerStyle={styles.scrollViewContent}
-      refreshControl={
-        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-      }
+        showsVerticalScrollIndicator={false} 
+        contentContainerStyle={styles.scrollViewContent}
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }
       >
         <Image 
           source={require('../../assets/Banner.png')}  
